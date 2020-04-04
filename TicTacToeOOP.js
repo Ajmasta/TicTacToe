@@ -14,6 +14,8 @@ const player2Points = document.getElementById("player2Points")
 
 const startGameButton = document.getElementById("startGameButton")
 const restartButton = document.getElementById("restartButton")
+const changePlayersButton = document.getElementById("changePlayersButton")
+
 let startedGame = false
 let  gameOver = false
 
@@ -60,9 +62,11 @@ const startGame=() =>{
             startMessage.classList.add("hidden")
             player1Turn.classList.remove("hidden")
             player2Turn.classList.remove("hidden")
+
             Player1 = Player(player1Span.textContent,false, "Player1")
             if (player2Playing) Player2 = Player(player2Span.textContent, false, "Player2")
             else Player2=Player("Computer",true,"Player2")
+
             buildGameBoard(gameArray)
             let active = Player1
             chooseTurn()
@@ -83,7 +87,15 @@ const buildGameBoard =  (array) => {
             gameBoard.appendChild(gameBoardspan)
 
             gameBoardspan.addEventListener("click", e=> humanPlayerTurn(active,e))
+            gameBoardspan.addEventListener("mouseenter", e=> e.target.classList.add("mouseenter"))
+
+            gameBoardspan.addEventListener("mouseleave", e=>  e.target.classList.remove("mouseenter"))
+
+
+
             restartButton.addEventListener("click", () => restartGame())
+            changePlayersButton.addEventListener("click", ()=> window.location.reload())
+
             
         
     });}  
@@ -162,6 +174,7 @@ const endGame = (Winner) => {
      gameInfo.appendChild(victoryDiv)
      
      restartButton.classList.remove("hidden")
+     changePlayersButton.classList.remove("hidden")
      
      
 
@@ -180,6 +193,8 @@ const restartGame = (victoryDiv) => {
     let victoryDiv = document.querySelector(".victoryDiv")
     gameInfo.removeChild(victoryDiv)
     restartButton.classList.add("hidden")
+    changePlayersButton.classList.add("hidden")
+
     active=Player1
     
     chooseTurn()

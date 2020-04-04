@@ -59,6 +59,13 @@ body{
     justify-content: center;
     align-items:center;
 }
+
+
+.mouseenter{
+    background-color: #F6FFFF !important;
+    border: 1px black solid !important;
+    color:black !important;
+}
 .active{
     color:red;
 }
@@ -91,6 +98,15 @@ button{
     background-color: black;
     color: #F6FFFF;
     padding: 1rem;
+    box-sizing: border-box;
+}
+
+button:hover{
+    background-color: #F6FFFF;
+    color: black;
+    box-shadow: 2px 2px 2px black;
+    box-sizing: border-box;
+
 }
 #player2NameInput{
     margin-bottom :1rem;
@@ -102,7 +118,17 @@ input{
     color: #F6FFFF;
     padding:0.5rem
 }
-
+input:hover{
+    background-color: #F6FFFF;
+    color: black;
+}
 input::placeholder{
     color:whitesmoke
+}
+input:hover::placeholder{
+    color: grey;
+
+}
+#restartButton{
+    margin-bottom: 1rem;
 }
