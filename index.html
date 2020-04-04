@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link href="tictactoe.css" rel="stylesheet">
+</head>
+<body>
+    <div class = "content">
+        <div class="gameBoard hidden"></div>
+
+        <div class="startMessage"> 
+        <h1> Tic-Tac-Toe</h1> 
+            
+            <input id = "player1NameInput" type="text" placeholder="Enter the name of Player 1" > 
+            <button id = "player2AddButton">Add a Second Player</button>
+             <input class = "hidden" id = "player2NameInput" type="text" placeholder="Enter the name of Player 2" >
+             <button class= "hidden" id = "player2RemoveButton">Play Against Computer</button>
+            <button id="startGameButton">Start Game</button>
+        </div>
+        
+        <div class="gameInfo">
+           <div class ="turn"> <span id="player1Turn" class = "active hidden"> Player 1 </span> <span id="player2Turn" class= "hidden"> Computer </span> </div>
+           
+               <div class ="points">
+               <span id ="player1Points"></span>
+               <span id="player2Points"></span>
+            </div>
+        </div>
+        <button id="restartButton" class = "hidden"> Restart </button>
+    </div>
+    <script src="TicTacToeOOP.js"></script>
+</body>
+</html>

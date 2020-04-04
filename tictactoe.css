@@ -1,0 +1,108 @@
+body{
+    height: 100vh;
+    overflow:hidden;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRAUgqfLyL--wpkPigIPK_8rFzgQCPLkFYPgUWeQPnFpN2haCkW&usqp=CAU");
+    background-repeat: no-repeat;
+    background-position: 90% 90% ;
+    background-color: white;
+    font-family: Montserrat, Oswald, sans-serif
+}
+.content{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+.gameBoard{
+    margin: auto;
+    width: 45vw;
+    height: 60vh; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.hidden{
+    visibility:hidden;
+    height:0vh !important;
+    width: 0vw !important;
+
+}
+.startMessage{
+    width: 45vw;
+    height: 60vh; 
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#player1NameInput{
+    margin-top: 10vh;
+}
+#player2RemoveButton{
+    margin-bottom: 5vh;
+}
+#player2AddButton{
+    margin-top: 10vh;
+}
+.gameBoard span {
+    width:15vw;
+    height: 20vh;
+    background-color: black;
+    border: 1px #F6FFFF solid;
+    box-sizing: border-box;
+    padding : 2rem;
+    color:#F6FFFF;
+    font-size:2rem;
+    
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.active{
+    color:red;
+}
+.turn{
+    font-size: 2rem;
+    width: 60vw;
+    display:flex;
+    justify-content:space-between;
+}
+
+.gameInfo{
+    text-align: center;
+}
+#restartButton{
+    margin-top: 1rem;
+}
+.points{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+.winner{
+    background-color: red;
+}
+button{
+    border-radius: 7%;
+    box-shadow: 2px 2px 2px grey;
+    border: none;
+    background-color: black;
+    color: #F6FFFF;
+    padding: 1rem;
+}
+#player2NameInput{
+    margin-bottom :1rem;
+}
+
+input{
+    border: 1px black solid;
+    background-color: black;
+    color: #F6FFFF;
+    padding:0.5rem
+}
+
+input::placeholder{
+    color:whitesmoke
+}
